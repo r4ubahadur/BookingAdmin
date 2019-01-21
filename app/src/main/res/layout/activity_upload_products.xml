@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".UploadProductsActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/progress_bar"
+                android:layout_marginTop="8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_view"
+                android:layout_marginTop="12dp"
+                android:background="#ededed"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+
+                <EditText
+                    android:id="@+id/edit_text_file_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="4"
+                    android:hint="Enter File Name"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#b65165fd" />
+
+                <EditText
+                    android:id="@+id/edit_text_file_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:hint="Price"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#b65165fd" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:layout_marginTop="12dp"
+                android:background="#ededed"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <EditText
+                    android:id="@+id/edit_text_file_color"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:hint="Color"
+                    android:textAllCaps="true"
+                    android:inputType="textCapCharacters"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#b65165fd" />
+
+                <EditText
+                    android:id="@+id/edit_text_file_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:hint="Size"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#b65165fd" />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear2"
+                android:layout_marginTop="12dp"
+                android:background="#ededed"
+                android:orientation="horizontal">
+
+
+
+                <EditText
+                    android:id="@+id/edit_text_file_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:hint="Desc"
+                    android:inputType="textCapSentences"
+                    android:maxLines="5"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#b65165fd" />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear3"
+                android:layout_marginTop="15dp"
+                android:background="#ededed"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+
+
+                <Button
+                    android:id="@+id/button_choose_image"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="Choose file" />
+
+                <Button
+                    android:id="@+id/button_upload"
+                    android:layout_width="0dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Upload" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
